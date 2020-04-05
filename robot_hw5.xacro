@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<robot name="robot_hw5" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="$(find rl_robot_description_pkg)/urdf/robot_hw5_macro.xacro" />
+	
+		<xacro:base_link_macro 
+			base_link_name="base_link">
+		</xacro:base_link_macro>
+	
+		<xacro:hw5170_joint
+			name="first_joint"
+			type="revolute"
+			parent="base_link"
+			child="second_link">
+			<origin xyz="0 0 0.13" />
+			<axis xyz="0 0 1"/>
+		</xacro:hw5170_joint>
+
+		<xacro:hw5_link name="second_link">			
+			<origin xyz="0 0 0.13" rpy="0 0 0.09"/>
+		</xacro:hw5_link>
+
+		<xacro:hw5120_joint
+			name="second_joint"
+			type="revolute"
+			parent="second_link"
+			child="third_link">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 1 0"/>
+		</xacro:hw5120_joint>
+
+		<xacro:hw5_link name="third_link">			
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+		</xacro:hw5_link>
+
+		<xacro:hw5170_joint
+			name="third_joint"
+			type="revolute"
+			parent="third_link"
+			child="fourth_link">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 0 1"/>
+		</xacro:hw5170_joint>
+		
+		<xacro:hw5_link name="fourth_link">			
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+		</xacro:hw5_link>
+		
+		<xacro:hw5120_joint
+			name="fourth_joint"
+			type="revolute"
+			parent="fourth_link"
+			child="fifth_link">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="1 0 0"/>
+		</xacro:hw5120_joint>
+			
+		<xacro:hw5_link name="fifth_link">			
+			<origin xyz="0 0 0" rpy="0 0 0"/>		
+		</xacro:hw5_link>
+		
+		<xacro:hw5170_joint
+			name="fifth_joint"
+			type="revolute"
+			parent="fifth_link"
+			child="sixth_link">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 0 1"/>
+		</xacro:hw5170_joint>
+
+		<xacro:hw5_link name="sixth_link">			
+			<origin xyz="0 0 0" rpy="0 0 0"/>		
+		</xacro:hw5_link>
+		
+		<xacro:hw5120_joint
+			name="sixth_joint"
+			type="revolute"
+			parent="sixth_link"
+			child="seventh_link">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="1 0 0"/>
+		</xacro:hw5120_joint>
+
+
+		<xacro:hw5_link name="seventh_link">			
+			<origin xyz="0 0 0" rpy="0 0 0"/>		
+		</xacro:hw5_link>
+
+		<xacro:hw5175_joint
+			name="seventh_joint"
+			type="revolute"
+			parent="seventh_link"
+			child="eighth_link">
+			<origin xyz="0 0 0.2" />
+			<axis xyz="0 1 0"/>
+		</xacro:hw5175_joint>
+
+		<xacro:hw5_link name="eighth_link">			
+			<origin xyz="0 0 0" rpy="0 0 0"/>		
+		</xacro:hw5_link>
+
+		
+
+</robot>
